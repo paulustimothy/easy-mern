@@ -1,4 +1,4 @@
-import {create} from "zustand";
+import {create} from "zustand"; //zustand is a state management library for react
 
 export const useProductStore = create((set) => ({
     products: [],

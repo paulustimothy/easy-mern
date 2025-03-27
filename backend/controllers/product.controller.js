@@ -18,10 +18,10 @@ export const createProduct = async (req,res) => {
         return res.status(400).json({success: false, message: "All fields are required"});
     }
 
-    const newProduct = new Product(product);
+    const newProduct = new Product(product); // create a new product based on the user's input
 
     try {
-        await newProduct.save();
+        await newProduct.save(); // save the new product to the database
         res.status(201).json({success: true, data: newProduct});
     } catch (error) {
        console.log("Error in creating product", error.message);
